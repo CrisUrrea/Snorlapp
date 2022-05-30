@@ -1,0 +1,245 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(241, 241, 236);
+    height: 100vh;
+    left: 50%;
+    top: 50%;
+}
+
+h1{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(10, 123, 189);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    width:100%;
+}
+
+div {
+    display: block;
+}
+
+.Exit a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2em;
+    background-color:rgb(10, 123, 189);
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    position: absolute;
+    text-decoration: none;
+    z-index: 2;
+}
+
+.Exit a:hover{
+    opacity: 0.6;
+    box-shadow: 5px 5px 5px #ccc;
+}
+
+.container{
+    position: fixed;
+    width: 130%;
+    height: 100%;
+    overflow: auto;
+    left:-320px;
+    transition: all ease-in-out 300ms;}
+
+.sidebar{
+    width: 320px;
+    height: 100%;
+    background-color: #F1981E;
+    overflow: auto;
+    float: left;
+}
+
+.side-hide{
+    float: right;
+    margin: 12px;
+    color: white;
+    opacity: .7;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.sidebar ul li{
+    list-style: none;
+    padding: 12px 10px;
+    list-style: none inside;
+}
+
+.sidebar ul li :hover{
+    opacity: .5;
+    cursor: pointer;
+}
+
+.sidebar ul li a{
+    text-decoration: none;
+    color:black;
+    font-size: 17px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    opacity: .7;
+}
+
+.content{
+    padding: 20px;
+    font-size: 20px;
+    color: black;
+    font-family: sans-serif;
+}
+
+.content h2{
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.content h3{
+    position: relative;
+    text-align:right;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    bottom: 68px;
+    right: 60px;
+}
+
+.botonMenu{
+    background-color: rgb(241, 241, 236);
+    border-radius: 5px;
+    border: none;
+}
+
+.botonMenu :hover{
+    opacity: .5;
+    box-shadow: 5px 5px 5px #ccc;
+}
+
+.show{
+    left:0;
+}
+
+i {
+    padding: 5px 10px;
+    background-color:rgb(59, 158, 216);
+    color: white;
+    border-radius: 5px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+i:hover{
+    opacity: .5;
+    box-shadow: 5px 5px 5px #ccc;
+}
+
+ul, li {
+    list-style: none inside;
+}
+ul.slider {
+    position:relative; /*Necesitamos que el ul sea relativo*/
+}
+
+ul.slider li {
+    opacity: 0; /*Ocultamos todos los <li>*/
+    transition: opacity .5s;
+    position: absolute; /*Posicionamos en absoluto los <li>*/
+    left: 0px;
+    top: 0px;
+    background:#fff;
+}
+
+ul.slider li:target {
+    opacity: 1; /*Mostramos el <li> al que apunta el enlace*/
+}
+
+ul, li {
+    box-sizing: border-box;
+}
+
+ul.slider li {
+    width: 80vw;
+    height: 70vh;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    opacity: 0; 
+    transition: opacity .5s;
+    font-weight: bold;
+    font-size: calc( 1.5rem + 1vw );
+    text-align: center;
+    left: 25%;
+}
+
+#slide1 {
+    background-color: rgb(241, 241, 236);
+    color: #F1981E;
+    font-size: 24px;
+}
+
+#slide2 {
+    background-color: rgb(241, 241, 236);
+    color: black;
+}
+
+#slide3 {
+    background-color: rgb(241, 241, 236);;
+    color: black;
+    font-size: 16px;
+    text-align: left;
+    top: 25.5%;
+    left: 25%; 
+    position: fixed;
+}
+
+#slide3 .texto{
+    width: 20%;
+    background: rgba(0,0,0,.7);
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #F1981E;
+    padding: 6px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    color:#FFF;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#slide3 .select{
+    width: 20%;
+    text-align: center;
+    font-size: 1em;
+    background: transparent;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #F1981E;
+    color: white;
+}
+
+#slide3 .btn{
+    background-color: rgb(59, 158, 216);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 10px;
+}
+
+#slide3 .btn:hover{
+    opacity: .5;
+    box-shadow: 5px 5px 5px #ccc;
+}
+
+#slide4{
+    background-color: rgb(241, 241, 236);
+}
+
+#slide4 img{
+    width: 500px;
+    height: 500px;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../Static/estilosmain.css">
+    <link rel="icon" href="../Static/Images/IconoFunlam.png" style="width:fit-content; height: fit-content;">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+</head>
+<body>
+<img src="../Static/Images/LogoFunlam.png" width="450" height="100" style="position: relative; left: 34%;">
+<h1>Universidad Católica Luis Amigo</h1>
+<div class="login">
+    <div class="loginbox">
+        <h2>Ingreso</h2>
+        <!--Formulario Login-->
+        <form name="fmlogin" action="query/login.php" method="post"> 
+            <table> 
+              <tr> 
+                <!--Usuario-->
+                <th scope="row"><label>Usuario</label></th> 
+                <td><span class="cnt"> 
+                  <input name="usuario" type="text" class="Input"  minlength="8" autofocus placeholder="Ingrese usuario"/> 
+                </span></td> 
+              </tr> 
+              <tr> 
+                <!--Contraseña-->
+                <th scope="row"><label>Contraseña</label> 
+                <td><span class="cnt"> 
+                  <input name="password" type="password" class="Input" required="required" minlength="6" placeholder="Ingrese contraseña"/> 
+                </span></td> 
+              </tr>
+              <!--Rol-->
+              <tr>
+                <p>Seleccione su rol</p>
+                <br><select name="Roles()" required>
+                  <option value="Seleccione una opción">Seleccione una opción</option>
+                  <option value="Administrativo">Administrativo</option>
+                  <option value="Seguridad">Seguridad</option>
+                  <option value="Docente">Docente</option>
+                  <option value="Personal de aseo">Personal de aseo</option>
+                </select>
+              </tr>
+              <tr>
+                <!--Boton de ingreso-->
+                <td><span class="cnt"> 
+                  <input value="Ingresar" type="submit" class="botonI" onclick="login()"/> 
+                </span></td>
+                <!--Boton Ocasional-->
+                <td><span class="cnt"> 
+                  <input value="Ocasional" target="_parent" onclick="Ocasional()" type="button" class="botonO"/> 
+                </span></td>
+            </tr>
+              </tr> 
+            </table> 
+       </form> 
+            </div>
+            <!--Boton de olvido de contraseña-->
+                <div class="buttom">
+                    <a href="FmPassword.html">¿Olvidaste tu contraseña?</a><br>
+                </div>
+        </div>
+        <div class="image">
+          <img src="../Static/Images/Snorlapp.png" width="170" height="100" style="position: fixed; top: 87%;; left: 87%"/>  
+        </div>
+
+<script> 
+    document.oncontextmenu = function(){return false} 
+</script>
+
+<!--Login-->
+<script>
+  function login(){
+    var usuario=document.fmlogin.usuario.value;
+    var password=document.fmlogin.password.value;
+
+    if(usuario=="cristhian.urreaat" && password=="1001362492"){
+      window.alert("Bienvenido al sistema academico");
+    } else{
+      if(usuario=="valentina.alvarezmu" && password=="123456789"){
+        window.alert("Bienvenido al sistema academico");
+      } else {
+        if(usuario=="diego.zuluagaye" && password=="0123456789"){
+          window.alert("Bienvenido al sistema academico");
+        } else{
+          if(usuario=="maria.bohorquezme" && password=="0987654321"){
+            window.alert("Bienvenido al sistema academico");
+          } else{
+            window.alert("Los datos son incorrectos");
+            window.location("main.html")
+          }
+        }
+      }
+    }
+  }
+</script>
+<script language="Javascript">
+  //Script para el login
+  function Ocasional(){ 
+  var done=0;
+  var usuario=document.fmlogin.usuario.value; 
+  var password=document.fmlogin.password.value;
+  //Condicionales de usuarios
+    if (usuario=="" && password=="") {
+      location.href="registroOcasional.html"
+      window.alert("Seras dirigido a un formulario por favor llenar");
+    }
+  }
+  </script>
+</body>
+</html>

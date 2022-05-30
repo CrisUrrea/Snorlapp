@@ -1,0 +1,133 @@
+body{
+  padding: 0;
+  margin: 0;
+  background-color: rgb(241, 241, 236);
+  background-size: cover;
+  font-family: sans-serif;
+  height: 100vh;
+}
+
+h1{
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 10px;
+  background-color: rgb(10, 123, 189);
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p{
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+}
+
+select{
+  width: 100%;
+  text-align: center;
+  font-size: 1em;
+  background: transparent;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #F1981E;
+  color: white;
+}
+
+.login{
+  width: 340px;
+  height: 420px;
+  background: rgb(241, 241, 236);
+  color:  rgb(10, 123, 189);
+  top: 10%;
+  left: 50%;
+  position: relative;
+  transform: translate(-50%, -20%);
+  box-sizing: border-box;
+  padding: 70px 30px;
+}
+
+.loginbox h2 {
+  margin: 0;
+  padding: 0 0 20px;
+  text-align: center;
+  font-size: 2rem;
+}
+  
+.loginbox label {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  display: block;
+  text-align: left;
+}
+  
+.loginbox input[type="text"], .loginbox input[type="password"] {
+  width: 100%;
+  margin-bottom: 20px;
+}
+  
+.loginbox input[type="text"], .loginbox input[type="password"] {
+  border: none;
+  border-bottom: 1px solid #F1981E;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: grey;
+  font-size: 1em;
+}
+  
+.loginbox .botonI{
+  background-color: rgb(10, 123, 189);
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 20px;
+  border: none;
+  font-size: 18px;
+}
+
+.loginbox .botonI:hover{
+  opacity: 0.6;
+  box-shadow: 5px 5px 5px #ccc;
+}
+
+.loginbox .botonO{
+  background-color: #F1981E;
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 20px;
+  border: none;
+  font-size: 18px;
+}
+
+.loginbox input[type="button"]:hover {
+  opacity: 0.6;
+  box-shadow: 5px 5px 5px #ccc;
+}
+
+.buttom a{
+  align-content: center;
+  text-decoration: underline;
+  font-size: 12px;
+  line-height: 40px;
+  color: black;
+  position:initial;
+  padding: 20px 0px;
+}
+
+.buttom a:hover{
+  color: grey;
+}
+
+div {
+  display: block;
+}
+
+.mensaje{
+  color: black;
+  border-bottom: none;
+}

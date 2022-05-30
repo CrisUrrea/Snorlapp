@@ -1,0 +1,88 @@
+body{
+    background-color: rgb(241, 241, 236);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(10, 123, 189);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.form_table{
+    top: 10%;
+    left: 50%;
+    display: block;
+    height: 80%;
+    width: 30%;
+    position: relative;
+    transform: translate(-50%, 20%);
+    box-sizing: border-box;
+    background-color: #F1981E;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.form_table .form_input{
+    background: rgb(96, 94, 94);
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgb(10, 123, 189);
+    width: 80%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    color:white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.form_table .form_label{
+    background-color: #F1981E;
+    color: rgb(255, 255, 255);
+}
+
+.button_part .button_return{
+  background-color: grey;
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 20px;
+  border: none;
+  font-size: 18px;
+}
+
+.button_part .button_send{
+    background-color: rgb(10, 123, 189);
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 20px;
+    border: none;
+    font-size: 18px;
+}
+
+.button_part .button_send:hover{
+    opacity: 0.5;
+    color: white;
+}
+
+.button_part .button_return:hover{
+    opacity: 0.5;
+    color: white;
+}
+
+.form_table .select_rol{
+    width: 80%;
+    font-size: 1em;
+    background: transparent;
+    padding: 10px;
+}

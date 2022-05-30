@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Static/estiloChange.css">
+    <link rel="icon" href="Static/Images/IconoFunlam.png" style="width:fit-content; height: fit-content; position: relative;">
+    <script src="query/formulario.js"></script>
+    <title>Cambio de contraseña</title>
+</head>
+<body>
+    <img src="../Static/Images/LogoFunlam.png" width="450" height="100" style="position: relative; left: 34%;">
+    <h1>Universidad Católica Luis Amigo</h1>
+        <form action="query/cambio.php" method="post" class="form_change" name="fmpassword">
+            <div class="change">
+                <h2>Nueva contraseña</h2>
+                <label class="label_form">Por favor cambiar la contraseña</label><br>
+                <!--Nueva-->
+                <br><input type="text" name="password" minlength="6" class="text_input" placeholder="Nueva contraseña" required autofocus>
+                <!--Confirmacion-->
+                <input type="text" name="validacion" minlength="6" class="text_input" placeholder="Repita la contraseña" required>
+                <!--Boton Cancelar-->
+                <a href="main.html"><input type="button" class="button_formC" value="Cancelar"></a>
+                <!--Boton Enviar-->
+                <input type="submit" class="button_formE" value="Enviar" onclick="revisar()">
+            </div>
+            <input type="text" id="impresion" name="impresion" style="display:none;">
+        </form>
+        <div class="image">
+            <img src="../Static/Images/Snorlapp.png" width="170" height="100" style="position: fixed; top: 87%;; left: 87%"/>  
+        </div>
+</body>
+</html>
+
+<script>
+    var password = document.getElementById("newpw"); 
+    var confirm_password = document.getElementById("confirmpw");
+
+function validatePassword(){
+    if(password.value != confirm_password.value) {
+    //Colorear confirm en rojo o usar:
+    confirm_password.setCustomValidity("Las contraseñas no coinciden");
+  } else {
+    confirm_password.setCustomValidity('');
+  }
+}
+</script>

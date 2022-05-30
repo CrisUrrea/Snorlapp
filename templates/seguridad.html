@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../Static/estiloSeguridad.css">
+    <link rel="icon" href="../Static/Images/IconoFunlam.png" style="width:fit-content; height: fit-content; position: relative;">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="query/formulario.js"></script>
+    <title>Seguridad</title>
+</head>
+<body>
+    <section class="container">
+        <div class="sidebar">
+          <div class="side-hide">
+            <i>X</i>
+          </div>
+          <ul>
+        <!--Opciones-->
+          <li><a href="#slide1">Inicio</a></li>
+          <li><a href="#slide4">Lector</a></li>
+          <li><a href="#slide2">Registro del piso</a></li>
+          <li><a href="#slide3">Cambio de permisos</a></li>
+          <li><a href="https://academia.funlam.edu.co/uenlinea/sistema/estudiante/index.jsf">Eventos</a></li>
+          <li><a href="https://academia.funlam.edu.co/uenlinea/sistema/index.jsf">Horario</a></li>
+          <li><a href="https://www.funlam.edu.co/modules/registroacademico/item.php?itemid=44">Calendario academico</a></li>
+        </ul>
+        </div>
+        <!--Contenido-->
+        <div class="content">
+            <button class="botonMenu"><img src="../Static/Images/menu.png" width="50px" height="50px"></button>
+            <img src="../Static/Images/LogoFunlam.png" width="450" height="100">
+            <h1>Universidad Catolica Luis Amigo</h1>
+            <ul class="slider">
+              <li id="slide1">
+                <p class="text">Bienvenido al portal de servicios de la Universidad Católica Luis Amigó.</p>
+                <p class="text">En la parte superior veras un boton para abrir el menu de opciones.</p>
+                <p class="text">Esperamos que tu experiencia sea grata.</p>
+              </li>
+              <li id="slide2">
+                <iframe src="https://docs.google.com/spreadsheets/d/1-sKQhOcRSTr-iKKuIisLWSbKEg8L9T3lPDNqno7eH-o/edit#gid=1216419555" 
+                style="width: 100%; height: 550px;" frameborder="0"></iframe>
+              </li>
+               <!--Permisos-->
+              <li id="slide3">
+                <form action="query/permisos.php" method="post" name="fmBuscar">
+                <label class="form_label">Ingrese el usuario al que quiere cambiar:</label>
+                <input type="text" placeholder="Ingrese usuario" name="usuario" class="texto" autofocus>
+                <input type="button" onclick="buscar()" value="Revisar" class="btn">
+                <!--Roles-->
+                  <div id="rolSelect" style="display:none;">
+                    <br><label>Que rol deseas otorgarle al usuario: </label>
+                    <select name="roles()" class="select" id="select" onchange="texto()">
+                      <option value="#">Seleccione una opcion</option>
+                      <option value="Administrativo">Administrativo</option>
+                      <option value="Docente">Docente</option>
+                      <option value="Personal de aseo">Personal de aseo</option>
+                      <option value="Estudiante">Estudiante</option>
+                      <option value="Persona externa">Persona externa</option>
+                  </select>
+                  <label for="form_label" id="mensajerol"></label>
+                  <!--Campo de nombre-->
+                  <div id="confirmacion" style="display:none;">
+                    <br><br><input type="text" class="texto" name="firma" placeholder="Ingrese su nombre completo">
+                    <input onclick="confirmacion()" type="button" value="Revisar permisos" class="btn">
+                  </div>
+                </div>
+                <!--Boton enviar-->
+                <div id="enviar" style="display:none;">
+                  <br><input type="submit" value="Cambiar Permiso" class="btn" onclick="enviar()">
+                </div>
+              </form>
+            </li>
+            <li id="slide4">
+              <img src="../Static/Images/qrS.png">
+            </li>
+           </ul>
+            <p class="timertext"></p><span class="secs"></span></p>
+        </div>
+        <!--Boton salir-->
+        <div class="Exit">
+            <a href="main.html"; style="top: 90%;">Regresar</a>
+        </div>
+    </section>
+    <div class="image">
+     <img src="../Static/Images/Snorlapp.png" width="170" height="100" style="position: fixed; top: 87%;; left: 87%"/>
+    </div>
+</body>
+</html>
+ <!--Funcion para el slide-->
+ <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+ <script language="Javascript">
+   $("button").on('click', function(){
+     $(".container").toggleClass("show");
+   });
+
+   $(".side-hide").on('click', function(){
+     $(".container").toggleClass("show")
+   });
+</script>
+
+<!--Temporizador de cierre-->
+<script type="text/javascript">
+ var currSeconds = 0;
+  
+ $(document).ready(function() {
+
+     /* Increment the idle time
+         counter every second */
+     let idleInterval = setInterval(timerIncrement, 1000);
+
+     /* Zero the idle timer
+         on mouse movement */
+     $(this).mousemove(resetTimer);
+     $(this).keypress(resetTimer);
+ });
+
+ function resetTimer() {
+
+     /* Hide the timer text */
+     document.querySelector(".timertext").style.display = 'none';
+      
+     currSeconds = 0;
+ }
+
+ function timerIncrement() {
+     currSeconds = currSeconds + 1;
+    
+     if(currSeconds>60){
+       window.location="main.html";
+       window.alert("Tu cuenta se ha cerrado por inactividad");
+     }
+ }
+</script>

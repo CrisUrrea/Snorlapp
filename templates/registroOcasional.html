@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Static/estiloRegistroOcasional.css">
+    <link rel="icon" href="Static/Images/IconoFunlam.png" style="width:fit-content; height: fit-content;">
+    <title>Registro</title>
+</head>
+<body>
+<img src="../Static/Images/LogoFunlam.png" width="450" height="100">
+<h1>Universidad Católica Luis Amigo</h1>
+    <form action="query/insert.php" method="post">
+        <div class="form_table">
+            <label class="form_label">Nombres</label>
+            <br><input type="text" name="txtNombre" required placeholder="Ingrese sus nombres completos" minlength="3" class="form_input">
+            <br><label class="form_label">Apellidos</label>
+            <br><input type="text" name="txtApellido" required placeholder="Ingrese sus apellidos completos" minlength="3" class="form_input">
+            <br><label class="form_label">Rol</label>
+            <br><select name="rol" class="select_rol" id="Rol" required>
+                <option value="#">Seleccione una opción</option>
+                <option value="Estudiante">Estudiante</option>
+                <option value="Publico Externo">Publico Externo</option>
+            </select>
+            <br><label class="form_label">Cedula</label>
+            <br><input type="text" name="txtCedula" required placeholder="Ingrese el numero de su cedula" minlength="6" class="form_input"required>
+            <div class="button_part">
+                <a class="button_return" href="main.html">Cancelar</a>
+                <input type="submit" value="Enviar" class="button_send" onclick="qr()">
+            </div>
+        </div>
+    </form>
+</body>
+</html>
